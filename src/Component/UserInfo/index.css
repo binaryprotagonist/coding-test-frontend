@@ -1,0 +1,35 @@
+.read-more-less--more,
+.read-more-less--less {
+  color: #66d3c4;
+  font-weight: 700;
+}
+p.para_semibold {
+    font-weight: 600;
+}
+.box_lamda h3 {
+    font-size: 18px;
+}
+
+.img_width
+{
+    width: 250px;
+    height: 300px;
+}
+
+@media(max-width: 767px)
+{
+    .img_width
+    {
+        width: 100%;
+        height: auto;
+    }
+    .box_lamda h3 {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    p.para_semibold {
+        font-weight: 600;
+        font-size: 20px;
+    }
+}

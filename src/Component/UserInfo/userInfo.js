@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import ReactReadMoreReadLess from "react-read-more-read-less";
+import "./index.css";
+
 import axios from 'axios';
 
 export default class userInfo extends Component {
@@ -48,10 +51,19 @@ export default class userInfo extends Component {
                     <div className="row">
                         {this.state.details.map(detail=><div  className="col-xl-3 col-lg-3 col-md-2 col-12 mt-4">
                         <div className="box_lamda">
-                                 <img src={detail.image?detail.image:'/medrect.png'} />
-                               <h3>{detail.label?detail.label:''}</h3>
-                               <p>{detail.snippet?detail.snippet:''}</p>
-                               </div>
+                                 <img className="img_width" src={detail.image?detail.image:'/Dummy_Title_Card.jpeg'} />
+                               <strong><h3>{detail.label?detail.label:''}</h3></strong>
+                               <p className="para_semibold"><ReactReadMoreReadLess
+                                charLimit={40}
+                                readMoreText={"find out more "}
+                                readLessText={"find out less"}
+                                readMoreClassName="read-more-less--more"
+                                readLessClassName="read-more-less--less"
+                                >
+                                    {detail.snippet?detail.snippet:''}      
+                                </ReactReadMoreReadLess></p>
+                             
+                            </div>
                         </div>)}
                          {/* <div className="col-xl-3 col-lg-3 col-md-2 col-12 mt-4">
                              
